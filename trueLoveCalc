@@ -1,0 +1,35 @@
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+
+#Transform user input into lowercase to be counted 
+name1 = name1.lower() 
+name2 = name2.lower()
+
+# Check User input for instances of letters in "TRUE LOVE" and count them
+count_of_T = (name1 + name2).count('t')
+count_of_R = (name1 + name2).count('r')
+count_of_U = (name1 + name2).count('u')
+count_of_E = (name1 + name2).count('e')
+count_of_L = (name1 + name2).count('l')
+count_of_O = (name1 + name2).count('o')
+count_of_V = (name1 + name2).count('v')
+
+# First digit = Instances of TRUE; Second digit = Instances of LOVE 
+first_digit = (count_of_T + count_of_R + count_of_U + count_of_E)
+second_digit = (count_of_L + count_of_O + count_of_V + count_of_E)
+
+# Transform string into int
+total = str(first_digit) + str(second_digit)
+total = int(total)
+
+
+if total < 10 or total > 90:
+    print(f'Your love store is {total}, you go together like coke and mentos')
+elif total >= 40 or total <= 50:
+    print(f'Your score is {total}, you are alright together.')
+else:
+    print(f'Your score is {total}')
